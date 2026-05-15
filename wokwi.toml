@@ -1,0 +1,10 @@
+[wokwi]
+version = 1
+firmware = "esp32-firmware.bin"
+rfc2217ServerPort = 4000
+
+# Encaminha o dashboard HTTP do ESP32 (porta 80) para o computador local.
+# Acesse depois da conexao WiFi: http://localhost:8180
+[[net.forward]]
+from = "localhost:8180"
+to = "target:80"

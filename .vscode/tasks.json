@@ -1,0 +1,58 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Wokwi MicroPython: upload e reset (recomendado)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "tools/upload_wokwi_micropython.py"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Wokwi MicroPython: upload lento fallback exec",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "tools/upload_wokwi_micropython.py",
+        "--method",
+        "exec",
+        "--chunk-size",
+        "192"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Wokwi MicroPython: listar arquivos remotos",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "tools/upload_wokwi_micropython.py",
+        "--list-only"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Wokwi MicroPython: diagnostico",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "tools/diagnose_wokwi.py"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
